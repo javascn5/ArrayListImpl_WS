@@ -37,4 +37,12 @@ public class CustomList<E> {
     public int size(){
         return size;
     }
+
+    public void remove(int index){
+        // miejsce w tablicy, ktore usuwamy
+        for(int i = index; i < size; i++){
+            elements[i] = elements[i + 1];
+        }
+        size--;
+    }
 }
